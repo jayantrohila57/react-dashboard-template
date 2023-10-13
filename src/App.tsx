@@ -181,7 +181,37 @@ function App() {
           </ul>
         </div>
         <div className="hidden absolute bottom-0 left-0 justify-center p-4 space-x-4 w-full lg:flex   z-20">
-          <div className="bg-white/10 "></div>
+          <div className="bg-white/10 px-3 p-2 rounded-md">
+            <button
+              id="dropdownAvatarNameButton"
+              data-dropdown-toggle="dropdownAvatarName"
+              className="flex items-center text-sm font-medium text-gray-900 rounded-full hover:text-blue-600 dark:hover:text-blue-500 md:mr-0 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-white"
+              type="button"
+            >
+              <span className="sr-only">Open user menu</span>
+              <img
+                className="w-8 h-8 mr-2 rounded-full"
+                src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
+                alt="user photo"
+              />
+              Bonnie Green
+              <svg
+                className="w-2.5 h-2.5 ml-2.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </aside>
       <main className="md:p-5 p-2 md:ml-64 h-full ">
@@ -509,33 +539,32 @@ function App() {
                   <h5 className="mr-3 font-bold ">Product Sell</h5>
                 </div>
                 <div className="flex flex-row justify-center   ">
-                  <div className="w-60">
+                  <div className="w-60 p-5">
                     <form className="flex items-center">
                       <label htmlFor="simple-search" className="sr-only">
                         Search
                       </label>
-                      <div className="w-full">
-                        <div className="flex flex-row items-center pointer-events-none">
+                      <div className="relative  md:w-96">
+                        <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                           <svg
-                            aria-hidden="true"
-                            className="w-5 h-5 text-gray-500"
+                            className="w-5 h-5 text-gray-500 "
                             fill="currentColor"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
                               fill-rule="evenodd"
-                              d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                               clip-rule="evenodd"
-                            />
+                              d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                            ></path>
                           </svg>
                         </div>
                         <input
                           type="text"
-                          id="simple-search"
-                          className="p-2 pl-10 text-sm text-gray-900 w-40  rounded-lg bg-gray-50 focus:ring-primary-500 focus:border-primary-500 "
+                          name="email"
+                          id="topbar-search"
+                          className="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-primary-500   block w-full pl-10 p-2.5   "
                           placeholder="Search"
-                          required
                         />
                       </div>
                     </form>
